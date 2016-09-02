@@ -5,6 +5,12 @@
         <group>
             <file>file:/home/patrick/dev/NetBeansProjects/BeaconAdmin/src/com/alphaws/mobile/server/common/User.java</file>
             <file>file:/home/patrick/dev/NetBeansProjects/BeaconAdmin/src/com/alphaws/mobile/server/plugin/BeaconAdmin.java</file>
+            <file>file:/home/patrick/dev/NetBeansProjects/BeaconAdmin/src/com/alphaws/mobile/server/common/Branch.java</file>
+            <file>file:/home/patrick/dev/NetBeansProjects/BeaconAdmin/src/com/alphaws/mobile/server/common/BeaconPublicity.java</file>
+            <file>file:/home/patrick/dev/NetBeansProjects/BeaconAdmin/src/com/alphaws/mobile/server/common/Location.java</file>
+            <file>file:/home/patrick/dev/NetBeansProjects/BeaconAdmin/src/com/alphaws/mobile/server/common/Beacon.java</file>
+            <file>file:/home/patrick/dev/NetBeansProjects/BeaconAdmin/src/com/alphaws/mobile/server/common/Relation.java</file>
+            <file>file:/home/patrick/dev/NetBeansProjects/BeaconAdmin/src/com/alphaws/mobile/server/common/Content.java</file>
         </group>
     </open-files>
 </project-private>

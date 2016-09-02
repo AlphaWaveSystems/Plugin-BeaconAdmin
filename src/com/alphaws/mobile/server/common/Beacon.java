@@ -5,6 +5,8 @@
 package com.alphaws.mobile.server.common;
 
 import java.sql.Timestamp;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  *
@@ -25,6 +27,9 @@ public class Beacon {
   private String version = null;
   private Timestamp update_date = null;
   private Integer battery = null;
+  private ArrayList<Campaign> shortDist = new ArrayList<>();
+  private ArrayList<Campaign> mediumDist = new ArrayList<>();
+  private ArrayList<Campaign> largeDist = new ArrayList<>();
 
   public Beacon(Integer id, Integer idComp, Integer idLoc, String code, String name,
           Integer type, String uuid, Integer major, Integer minor, String tx,
@@ -43,6 +48,10 @@ public class Beacon {
       this.version = version;
       this.update_date = update_date;
       this.battery = battery;
+      
+      shortDist = new ArrayList<>();
+      mediumDist = new ArrayList<>();
+      largeDist = new ArrayList<>();
       
   }
 
@@ -149,6 +158,51 @@ public class Beacon {
     public void setBattery(Integer battery) {
         this.battery = battery;
     }
-  
+
+    public Campaign getShortCompaign(Integer dist){
+        return shortDist.get(dist);
+    }
+    
+    public ArrayList<Campaign> getShortCampaigns() {
+        return shortDist;
+    }
+
+    public void addShortCampaign(Campaign campaign) {
+        if(this.shortDist == null){
+            this.shortDist = new ArrayList<>();
+        }
+        this.shortDist.add(campaign);
+    }
+
+    public Campaign getMediumCompaign(Integer dist){
+        return mediumDist.get(dist);
+    }
+    
+    public ArrayList<Campaign> getMediumCampaigns() {
+        return mediumDist;
+    }
+
+    public void addMediumCampaign(Campaign campaign) {
+        if(this.mediumDist == null){
+            this.mediumDist = new ArrayList<>();
+        }
+        this.mediumDist.add(campaign);
+    }
+
+    public Campaign getLargeCompaign(Integer dist){
+        return largeDist.get(dist);
+    }
+    
+    public ArrayList<Campaign> getlargeCampaigns() {
+        return largeDist;
+    }
+
+    public void addLargeCampaign(Campaign campaign) {
+        if(this.largeDist == null){
+            this.largeDist = new ArrayList<>();
+        }
+        this.largeDist.add(campaign);
+    }
+    
     
 }

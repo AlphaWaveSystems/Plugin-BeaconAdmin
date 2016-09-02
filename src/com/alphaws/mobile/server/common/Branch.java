@@ -4,6 +4,8 @@
  */
 package com.alphaws.mobile.server.common;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author patrick
@@ -17,6 +19,7 @@ public class Branch {
     private Integer lat;
     private Integer lng;
     private String update_date;
+    private ArrayList<Beacon> beacons = new ArrayList<>();
 
     public Branch(Integer id, Integer id_company, String name, String direction, Integer lat, Integer lng, String update_date) {
         this.id = id;
@@ -28,6 +31,23 @@ public class Branch {
         this.update_date = update_date;
     }
 
+    public void addBeacon(Beacon b){
+        if(beacons == null){
+            beacons = new ArrayList<>();
+        }
+        
+        beacons.add(b);
+    }
+    
+      public ArrayList<Beacon> getBeacons() {
+        return beacons;
+    }
+
+    public void setBeacons(ArrayList<Beacon> beacons) {
+        this.beacons = beacons;
+    }
+    
+    
     
     public Integer getId() {
         return id;
